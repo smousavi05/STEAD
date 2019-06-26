@@ -8,7 +8,9 @@ https://drive.google.com/file/d/1yrLAzim9qFR5fNP1dOTxnV-a3edqFVWB/view?usp=shari
 
 # looking at some earthquake samples
 
-    hdf_f = "eventData_23.hdf5"
+    import h5py
+    import matplotlib.pyplot as plt
+    hdf_f = "STEAD.hdf5"
     r = h5py.File(hdf_f, 'r')
 
 #
