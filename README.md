@@ -25,6 +25,7 @@ category:  noise
 
 ----------
 
+    inpt =  r['earthquake']['local']
     for evi in inpt:
         print(str(evi))
         x = inpt[evi]
@@ -84,3 +85,8 @@ category:  noise
 
 ![event](eventSample2.png)
 
+
+For noise samples:
+
+    inpt =  r['non_earthquake']['noise'] 
+ 
