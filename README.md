@@ -6,6 +6,8 @@ You can get the test sample data from here:
 https://drive.google.com/file/d/1yrLAzim9qFR5fNP1dOTxnV-a3edqFVWB/view?usp=sharing
 
 
+# looking at some earthquake samples
+
     hdf_f = "eventData_23.hdf5"
     r = h5py.File(hdf_f, 'r')
 
