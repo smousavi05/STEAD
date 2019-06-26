@@ -18,10 +18,10 @@ https://drive.google.com/file/d/1yrLAzim9qFR5fNP1dOTxnV-a3edqFVWB/view?usp=shari
         for nn in r[n]:
             print('category: ', nn)
 
-class:  earthquake
-category:  local
-class:  non_earthquake
-category:  noise
+class:  earthquake\n
+category:  local\n
+class:  non_earthquake\n
+category:  noise\n
 
 ----------
 
