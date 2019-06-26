@@ -19,9 +19,9 @@ https://drive.google.com/file/d/1yrLAzim9qFR5fNP1dOTxnV-a3edqFVWB/view?usp=shari
             print('category: ', nn)
 
 class:  earthquake  
-category:  local . 
-class:  non_earthquake . 
-category:  noise . 
+category:  local   
+class:  non_earthquake   
+category:  noise   
 
 ----------
 
