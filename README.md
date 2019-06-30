@@ -5,7 +5,7 @@ See the notebook for the dataset's property
 
 You can get the test sample data from here:
 
-https://dl.orangedox.com/1bYQw9n6cOBeXPSkxv
+https://dl.orangedox.com/1bYQw9n6cOBeXPSkxv        
 
 # How to access earthquake samples
 
