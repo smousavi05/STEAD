@@ -3,7 +3,7 @@
 See the notebook for the dataset's property                                                      
 ------------------------------------------------------
 
-You can get the test sample data from here:       
+You can get the dataset from here:       
 
 https://dl.orangedox.com/1bYQw9n6cOBeXPSkxv        
 
