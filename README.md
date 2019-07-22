@@ -4,7 +4,7 @@ See the notebook for the dataset's property
 ------------------------------------------------------
         
 You can get the dataset from here:                             
-     
+  
 
 # How to access earthquake samples
 
