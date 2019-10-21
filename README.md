@@ -4,10 +4,10 @@ See the notebook for the dataset's property
 ------------------------------------------------------
                
 You can get the dataset from here: 
-https://dl.orangedox.com/STEAD-waveforms
+https://dl.orangedox.com/qzrFKdsH7azjiMwe8i
 
 You can get the metadata in a separate CSV file from here: 
-https://dl.orangedox.com/STEAD-metadata
+https://dl.orangedox.com/8QFWnBsbolsCmtcoMG
 
   
 
