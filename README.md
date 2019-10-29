@@ -9,7 +9,7 @@ https://dl.orangedox.com/qzrFKdsH7azjiMwe8i
 You can get the metadata in a separate CSV file from here: 
 https://dl.orangedox.com/8QFWnBsbolsCmtcoMG
 
-Note: all the metadata associated with each waveform are aslo available in the hdf5 file as attributes. 
+Note: all the metadata associated with each waveform are aslo available in the hdf5 file (as attributes) as well. 
 
   
 
