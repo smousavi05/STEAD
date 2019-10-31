@@ -1,7 +1,5 @@
 #  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals forAI                                                                                                                                                                                                                                
-------------------------------------------------------
-See the notebook for the dataset's property                                                                                  
-------------------------------------------------------
+
                
 You can get the dataset from here: 
 https://dl.orangedox.com/qzrFKdsH7azjiMwe8i
@@ -96,4 +94,7 @@ category:  noise
 For noise samples:
 
     inpt =  r['non_earthquake']['noise'] 
- 
+    
+------------------------------------------------------
+See the notebook for the dataset's property                                                                                  
+------------------------------------------------------
