@@ -10,7 +10,7 @@ https://dl.orangedox.com/waveforms-10-29-19.hdf5
 ### You can get the metadata from here:
 https://dl.orangedox.com/metadata-10-29-19.csv
 
-Note: all the metadata associated with each waveform are aslo available in the hdf5 file (as attributes) as well. 
+Note: all the metadata associated with each waveform are aslo available in the hdf5 file (as attributes). 
 
 ### Latest Version:
 Oct 29, 2019
