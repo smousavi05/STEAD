@@ -1,15 +1,16 @@
-#  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals forAI                                                                                                                                                                                                                                
+##  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals forAI                                                                                                                                                                                                                                
 
                
-You can get the dataset from here: 
+# You can get the wavefoms from here: 
 https://dl.orangedox.com/qzrFKdsH7azjiMwe8i
 
-You can get the metadata in a separate CSV file from here: 
+# You can get the metadata from here:
 https://dl.orangedox.com/8QFWnBsbolsCmtcoMG
 
 Note: all the metadata associated with each waveform are aslo available in the hdf5 file (as attributes) as well. 
 
-  
+# Latest Version:
+Oct 20, 2019
 
 # How to access earthquake samples
 
