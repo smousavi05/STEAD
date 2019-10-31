@@ -8,12 +8,12 @@ https://dl.orangedox.com/qzrFKdsH7azjiMwe8i
 
 
 ### You can get the metadata from here:
-https://dl.orangedox.com/8QFWnBsbolsCmtcoMG
+https://dl.orangedox.com/metadata-10-29-19.csv
 
 Note: all the metadata associated with each waveform are aslo available in the hdf5 file (as attributes) as well. 
 
 ### Latest Version:
-Oct 20, 2019
+Oct 29, 2019
 
 -------------------------------------
 ## How to access earthquake samples
