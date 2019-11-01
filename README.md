@@ -9,7 +9,7 @@ https://dl.orangedox.com/metadata-10-29-19.csv
 
 Note: all the metadata associated with each waveform are aslo available in the hdf5 file (as attributes). 
 
-### Latest Version:
+### Last Update:
 Oct 29, 2019
 
 -------------------------------------
