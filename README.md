@@ -10,7 +10,7 @@ https://dl.orangedox.com/metadata-10-29-19.csv
 ### You can get the paper from here:
 https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
 
-**Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform). 
+** Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform). 
 
 ### Last Update:
 Oct 29, 2019
