@@ -2,10 +2,10 @@
                        
 -----------------------------------------                                                                                                                                                                                   
 ### You can get the wavefoms from here: 
-https://dl.orangedox.com/waveforms-10-29-19.hdf5
+https://dl.orangedox.com/waveforms-11-13-19
 
 ### You can get the metadata from here:
-https://dl.orangedox.com/metadata-10-29-19.csv
+https://dl.orangedox.com/metadata-11-13-19
 
 ### You can get the paper from here:
 https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
@@ -13,7 +13,7 @@ https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_S
 *Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).* 
 
 ### Last Update:
-Oct 29, 2019
+Nov 15, 2019
 
 -------------------------------------
 ## How to access earthquake samples
