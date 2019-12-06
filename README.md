@@ -9,12 +9,14 @@ https://dl.orangedox.com/metadata-11-13-19
 ### You can get the paper from here:
 https://ieeexplore.ieee.org/abstract/document/8871127
 
+### You can send your questions or suggestions to: 
+mmoiusavi@stanford.edu
+
 *Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).* 
 
 ### Last Update:
 Nov 15, 2019
 
-#### If you had questions or suggestions please email me @ mmoiusavi@stanford.edu
 
 -------------------------------------
 
