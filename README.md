@@ -10,7 +10,7 @@ https://dl.orangedox.com/metadata-11-13-19
 https://ieeexplore.ieee.org/abstract/document/8871127
 
 ### You can send your questions or suggestions to: 
-mmoiusavi@stanford.edu
+mmousavi@stanford.edu
 
 *Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).* 
 
