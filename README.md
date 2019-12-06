@@ -5,14 +5,13 @@ https://dl.orangedox.com/waveforms-11-13-19
 
 ### You can get the metadata from here:
 https://dl.orangedox.com/metadata-11-13-19
+* Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).* 
 
 ### You can get the paper from here:
 https://ieeexplore.ieee.org/abstract/document/8871127
 
 ### You can send your questions or suggestions to: 
 mmousavi@stanford.edu
-
-*Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).* 
 
 ### Last Update:
 Nov 15, 2019
