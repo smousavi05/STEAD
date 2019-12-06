@@ -14,7 +14,7 @@ https://ieeexplore.ieee.org/abstract/document/8871127
 ### Last Update:
 Nov 15, 2019
 
-### #If you had questions or suggestions please email me @ mmoiusavi@stanford.edu
+#### If you had questions or suggestions please email me @ mmoiusavi@stanford.edu
 
 -------------------------------------
 
