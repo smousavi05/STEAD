@@ -1,7 +1,7 @@
 #  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI                                                                                                                                                  
 -----------------------------------------                                                                                                                                                                                   
 ### You can get the wavefoms from here: 
-https://dl.orangedox.com/waveforms-11-13-19
+https://rebrand.ly/waveforms-11-13-19
 
 ### You can get the metadata from here:
 https://dl.orangedox.com/metadata-11-13-19
