@@ -23,12 +23,12 @@ Nov 15, 2019
 
 
 -------------------------------------
+## Reference:
 
 `Mousavi, S. M., Sheng, Y., Zhu, W., Beroza G.C., (2019). 
 STanford EArthquake Dataset (STEAD): A Global Data Set of Seismic Signals for AI, 
 IEEE Access, doi:10.1109/ACCESS.2019.2947848` 
 
-------------------------
 
 BibTeX:
 
