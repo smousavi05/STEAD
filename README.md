@@ -21,9 +21,8 @@ mmousavi@stanford.edu
 ### Last Update:
 Nov 15, 2019
 
-
 -------------------------------------
-## Reference:
+Reference:
 
 `Mousavi, S. M., Sheng, Y., Zhu, W., Beroza G.C., (2019). 
 STanford EArthquake Dataset (STEAD): A Global Data Set of Seismic Signals for AI, 
