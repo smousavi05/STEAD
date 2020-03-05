@@ -124,6 +124,35 @@ For noise samples:
 
     inpt =  r['non_earthquake']['noise'] 
     
+    
+Csv file can be used to easily select specific waveforms and only read those from the hdf5 file for efficiency. Following is a simple example for this:
+
+    import pandas as pd
+    import h5py
+    import nupy as np
+
+    file_name = "./dataset/waveforms.hdf5"
+    csv_file = "./dataset/metadata.csv"
+    df = pd.read_csv(csv_file)
+    df = df[df.trace_category == 'earthquake_local']
+    df = df[df.source_distance_km <= 110]
+    ev_list = df['trace_name'].to_list()
+
+    dtfl = h5py.File(file_name, 'r')
+    for c, evi in enumerate(ev_list):
+        dataset = dtfl.get('earthquake/local/'+str(evi))  
+        data = np.array(dataset)
+        BAZ = round(float(dataset.attrs['back_azimuth_deg']), 2)
+        spt = int(dataset.attrs['p_arrival_sample'])
+        sst = int(dataset.attrs['s_arrival_sample'])
+        dpt = dataset.attrs['source_depth_km']
+        mag = round(float(dataset.attrs['source_magnitude']), 2)
+        dis = round(float(dataset.attrs['source_distance_deg']), 2)
+        SNR = dataset.attrs['snr_db']
+        sp = int(sst - spt)
+
+    
+    
 ------------------------------------------------------
 
 # See the notebook for the dataset's property                                                                                  
