@@ -125,7 +125,7 @@ For noise samples:
     inpt =  r['non_earthquake']['noise'] 
     
     
-Csv file can be used to easily select specific waveforms and only read those from the hdf5 file for efficiency. Following is a simple example for this:
+### The csv file can be used to easily select specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency. Following is a simple example for this:
 
     import pandas as pd
     import h5py
