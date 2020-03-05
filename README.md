@@ -130,27 +130,37 @@ For noise samples:
     import pandas as pd
     import h5py
     import nupy as np
-
+    
     file_name = "./dataset/waveforms.hdf5"
     csv_file = "./dataset/metadata.csv"
+    
+    # reading the csv file into a dataframe:
     df = pd.read_csv(csv_file)
+    
+    # filterering the dataframe
     df = df[df.trace_category == 'earthquake_local' & df.source_distance_km <= 110]
+    
+    # making a list of trace names for the selected data
     ev_list = df['trace_name'].to_list()
-
+    
+    # retrieving selected waveforms from the hdf5 file: 
     dtfl = h5py.File(file_name, 'r')
     for c, evi in enumerate(ev_list):
-        dataset = dtfl.get('earthquake/local/'+str(evi))  
+        dataset = dtfl.get('earthquake/local/'+str(evi)) 
+        # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
         data = np.array(dataset)
-        BAZ = round(float(dataset.attrs['back_azimuth_deg']), 2)
-        spt = int(dataset.attrs['p_arrival_sample'])
-        sst = int(dataset.attrs['s_arrival_sample'])
-        dpt = dataset.attrs['source_depth_km']
-        mag = round(float(dataset.attrs['source_magnitude']), 2)
-        dis = round(float(dataset.attrs['source_distance_deg']), 2)
-        SNR = dataset.attrs['snr_db']
-        sp = int(sst - spt)
+        # P arrival time in samples for these waveforms
+        spt = int(dataset.attrs['p_arrival_sample']) 
+        # depth of the associated event in km
+        dpt = dataset.attrs['source_depth_km'] 
+        # event's magnitude 
+        mag = round(float(dataset.attrs['source_magnitude']), 2) 
+        # epicentral distance in degree
+        dis = round(float(dataset.attrs['source_distance_deg']), 2) 
+        # signal to noise ratio for each channel
+        SNR = dataset.attrs['snr_db'] 
 
-    
+You can retrieve all other labels associated with each waveform similarly.
     
 ------------------------------------------------------
 
