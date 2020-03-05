@@ -134,8 +134,7 @@ For noise samples:
     file_name = "./dataset/waveforms.hdf5"
     csv_file = "./dataset/metadata.csv"
     df = pd.read_csv(csv_file)
-    df = df[df.trace_category == 'earthquake_local']
-    df = df[df.source_distance_km <= 110]
+    df = df[df.trace_category == 'earthquake_local' & df.source_distance_km <= 110]
     ev_list = df['trace_name'].to_list()
 
     dtfl = h5py.File(file_name, 'r')
