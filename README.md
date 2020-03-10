@@ -65,8 +65,8 @@ category:  noise
         import numpy as np
         import matplotlib.pyplot as plt
 
-        file_name = "./dataset6/waveforms_12_20_19.hdf5"
-        csv_file = "./dataset6/metadata_12_20_19.csv"
+        file_name = "waveforms.hdf5"
+        csv_file = "metadata.csv"
 
         # reading the csv file into a dataframe:
         df = pd.read_csv(csv_file)
@@ -145,8 +145,8 @@ category:  noise
         import numpy as np
         import matplotlib.pyplot as plt
 
-        file_name = "./dataset6/waveforms_12_20_19.hdf5"
-        csv_file = "./dataset6/metadata_12_20_19.csv"
+        file_name = "waveforms.hdf5"
+        csv_file = "metadata.csv"
 
         # reading the csv file into a dataframe:
         df = pd.read_csv(csv_file)
