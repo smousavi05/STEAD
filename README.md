@@ -58,62 +58,81 @@ class:  non_earthquake
 category:  noise   
 
 ----------
+### The csv file can be used to easily select specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency. Following is a simple example for this:
 
-    inpt =  r['earthquake']['local']
-    for evi in inpt:
-        print(str(evi))
-        x = inpt[evi]
+        import pandas as pd
+        import h5py
+        import numpy as np
+        import matplotlib.pyplot as plt
 
-        fig = plt.figure()
-        ax = fig.add_subplot(311)         
-        plt.plot(x[:,0], 'k')
-        plt.rcParams["figure.figsize"] = (8, 5)
-        legend_properties = {'weight':'bold'}    
-        plt.tight_layout()
+        file_name = "./dataset6/waveforms_12_20_19.hdf5"
+        csv_file = "./dataset6/metadata_12_20_19.csv"
 
-        if x.attrs['trace_category'] == 'earthquake_local':    
+        # reading the csv file into a dataframe:
+        df = pd.read_csv(csv_file)
+        print(f'total events in csv file: {len(df)}')
+        # filterering the dataframe
+        df = df[(df.trace_category == 'earthquake_local') & (df.source_distance_km <= 20) & (df.source_magnitude > 3)]
+        print(f'total events selected: {len(df)}')
+
+        # making a list of trace names for the selected data
+        ev_list = df['trace_name'].to_list()
+
+        # retrieving selected waveforms from the hdf5 file: 
+        dtfl = h5py.File(file_name, 'r')
+        for c, evi in enumerate(ev_list):
+            dataset = dtfl.get('earthquake/local/'+str(evi)) 
+            # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
+            data = np.array(dataset)
+
+            fig = plt.figure()
+            ax = fig.add_subplot(311)         
+            plt.plot(data[:,0], 'k')
+            plt.rcParams["figure.figsize"] = (8, 5)
+            legend_properties = {'weight':'bold'}    
+            plt.tight_layout()
             ymin, ymax = ax.get_ylim()
-            pl = plt.vlines(x.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
-            sl = plt.vlines(x.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
-            cl = plt.vlines(x.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
+            pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
+            sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
+            cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
             plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
-        plt.ylabel('Amplitude counts', fontsize=12) 
-        ax.set_xticklabels([])
+            plt.ylabel('Amplitude counts', fontsize=12) 
+            ax.set_xticklabels([])
 
-        ax = fig.add_subplot(312)         
-        plt.plot(x[:,1], 'k')
-        plt.rcParams["figure.figsize"] = (8, 5)
-        legend_properties = {'weight':'bold'}    
-        plt.tight_layout()
-
-        if x.attrs['trace_category'] == 'earthquake_local':    
+            ax = fig.add_subplot(312)         
+            plt.plot(data[:,1], 'k')
+            plt.rcParams["figure.figsize"] = (8, 5)
+            legend_properties = {'weight':'bold'}    
+            plt.tight_layout()
             ymin, ymax = ax.get_ylim()
-            pl = plt.vlines(x.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
-            sl = plt.vlines(x.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
-            cl = plt.vlines(x.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
+            pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
+            sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
+            cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
             plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
-        plt.ylabel('Amplitude counts', fontsize=12) 
-        ax.set_xticklabels([])
+            plt.ylabel('Amplitude counts', fontsize=12) 
+            ax.set_xticklabels([])
 
-        ax = fig.add_subplot(313)         
-        plt.plot(x[:,2], 'k')
-        plt.rcParams["figure.figsize"] = (8,5)
-        legend_properties = {'weight':'bold'}    
-        plt.tight_layout()
-
-        if x.attrs['trace_category'] == 'earthquake_local':    
+            ax = fig.add_subplot(313)         
+            plt.plot(data[:,2], 'k')
+            plt.rcParams["figure.figsize"] = (8,5)
+            legend_properties = {'weight':'bold'}    
+            plt.tight_layout()
             ymin, ymax = ax.get_ylim()
-            pl = plt.vlines(x.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
-            sl = plt.vlines(x.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
-            cl = plt.vlines(x.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
+            pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
+            sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
+            cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
             plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
-        plt.ylabel('Amplitude counts', fontsize=12) 
-        ax.set_xticklabels([])
+            plt.ylabel('Amplitude counts', fontsize=12) 
+            ax.set_xticklabels([])
+            plt.show() 
 
-        plt.show() 
+            for at in dataset.attrs:
+                print(at, dataset.attrs[at])    
 
-        for at in x.attrs:
-            print(at, x.attrs[at])    
+            inp = input("Press a key to plot the next waveform!")
+            if inp == "r":
+                continue             
+
 
 ![event](eventSample.png)
 
@@ -123,45 +142,7 @@ category:  noise
 For noise samples:
 
     inpt =  r['non_earthquake']['noise'] 
-    
-    
-### The csv file can be used to easily select specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency. Following is a simple example for this:
 
-    import pandas as pd
-    import h5py
-    import nupy as np
-    
-    file_name = "./dataset/waveforms.hdf5"
-    csv_file = "./dataset/metadata.csv"
-    
-    # reading the csv file into a dataframe:
-    df = pd.read_csv(csv_file)
-    
-    # filterering the dataframe
-    df = df[df.trace_category == 'earthquake_local' & df.source_distance_km <= 110]
-    
-    # making a list of trace names for the selected data
-    ev_list = df['trace_name'].to_list()
-    
-    # retrieving selected waveforms from the hdf5 file: 
-    dtfl = h5py.File(file_name, 'r')
-    for c, evi in enumerate(ev_list):
-        dataset = dtfl.get('earthquake/local/'+str(evi)) 
-        # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
-        data = np.array(dataset)
-        # P arrival time in samples for these waveforms
-        spt = int(dataset.attrs['p_arrival_sample']) 
-        # depth of the associated event in km
-        dpt = dataset.attrs['source_depth_km'] 
-        # event's magnitude 
-        mag = round(float(dataset.attrs['source_magnitude']), 2) 
-        # epicentral distance in degree
-        dis = round(float(dataset.attrs['source_distance_deg']), 2) 
-        # signal to noise ratio for each channel
-        SNR = dataset.attrs['snr_db'] 
-
-You can retrieve all other labels associated with each waveform similarly.
-    
 ------------------------------------------------------
 
 # See the notebook for the dataset's property                                                                                  
