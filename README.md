@@ -40,7 +40,7 @@ BibTeX:
     }
 
 -------------------------------------
-## How to access earthquake samples
+### classes and categories in the dataset
 
     import h5py
     import matplotlib.pyplot as plt
