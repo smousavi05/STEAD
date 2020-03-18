@@ -60,7 +60,7 @@ category:  noise
 ----------
 The csv file can be used to easily select specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency.
 
-### Example of how accessing the earthquake waveforms:
+### Example of data selection and accessing (the earthquake waveforms):
 
         import pandas as pd
         import h5py
