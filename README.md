@@ -5,10 +5,10 @@
 
 -----------------------------------------                                                                                                                                                                                   
 ### You can get the wavefoms from here: 
-https://rebrand.ly/waveforms-11-13-19  (this is a single hdf5 file, 83 GB)
+https://rebrand.ly/waveforms-11-13-19  (this is a single hdf5 file ~ 89 GB)
 
 ### You can get the metadata from here :
-https://rebrand.ly/metadata-11-13-19   (this is a single csv file, 350 MB)
+https://rebrand.ly/metadata-11-13-19   (this is a single csv file ~ 350 MB)
 
 * Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).
 
@@ -19,7 +19,7 @@ https://ieeexplore.ieee.org/abstract/document/8871127
 mmousavi@stanford.edu
 
 ### Last Update:
-Nov 15, 2019
+April 7, 2020
 
 -------------------------------------
 Reference:
