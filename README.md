@@ -6,8 +6,6 @@
 -----------------------------------------                                                                                                                                                                                   
 ### You can get the wavefoms from here: 
 
-#### Notice: this file is being replaced currently! try downloading in April 8 2020
-
 https://rebrand.ly/waveforms-11-13-19  (this is a single hdf5 file ~ 89 GB)
 
 ### You can get the metadata from here :
@@ -22,7 +20,7 @@ https://ieeexplore.ieee.org/abstract/document/8871127
 mmousavi@stanford.edu
 
 ### Last Update:
-April 7, 2020
+April 9, 2020
 
 -------------------------------------
 Reference:
