@@ -143,6 +143,10 @@ The csv file can be used to easily select specific part of the dataset and only 
 
 
 ### Example of data selection and accessing (noise waveforms):
+#### Note:
+For some of the noise data waveforms are identical for 3 components. These are related to single channel stations.
+However, these make up to less than 10 % of noise data. For the rest, noise are different for each channel.
+
         import pandas as pd
         import h5py
         import numpy as np
