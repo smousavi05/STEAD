@@ -141,6 +141,7 @@ The csv file can be used to easily select specific part of the dataset and only 
 
 ![event](eventSample2.png)
 
+-----------------------------------------                                                                                                                                                                                   
 
 
 ### How to convert raw waveforms into Acceleration, Velocity, or Displacement:
@@ -260,7 +261,7 @@ The csv file can be used to easily select specific part of the dataset and only 
         
 ![acc](1_acc.png)
 
-
+-----------------------------------------                                                                                                                                                                                   
 
 ### Example of data selection and accessing (noise waveforms):
 #### Note:
