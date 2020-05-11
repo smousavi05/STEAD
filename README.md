@@ -202,6 +202,8 @@ The csv file can be used to easily select specific part of the dataset and only 
         plt.ylabel('counts')
         plt.title('Raw Data')
         plt.show()
+        
+![raw](1_raw.png)
 
         # downloading the instrument response of the station from IRIS
         client = Client("IRIS")
@@ -212,11 +214,7 @@ The csv file can be used to easily select specific part of the dataset and only 
                                         loc="*", 
                                         channel="*",
                                         level="response")  
-        # exploring the downloaded response file   
-        print(inventory)
-        inventory[0].plot_response(min_freq=1E-4) 
-
-
+ 
         # converting into displacement
         st = make_stream(dataset)
         st = st.remove_response(inventory=inventory, output="DISP", plot=False)
@@ -230,6 +228,8 @@ The csv file can be used to easily select specific part of the dataset and only 
         plt.title('Displacement')
         plt.show()
 
+![disp](1_disp.png)
+
         # converting into velocity
         st = make_stream(dataset)
         st = st.remove_response(inventory=inventory, output='VEL', plot=False) 
@@ -242,6 +242,8 @@ The csv file can be used to easily select specific part of the dataset and only 
         plt.ylabel('meters/second')
         plt.title('Velocity')
         plt.show()
+        
+![vel](1_vel.png)
 
         # converting into acceleration
         st = make_stream(dataset)
@@ -255,6 +257,8 @@ The csv file can be used to easily select specific part of the dataset and only 
         plt.ylabel('meters/second**2')
         plt.title('Acceleration')
         plt.show()
+        
+![acc](1_acc.png)
 
 
 
