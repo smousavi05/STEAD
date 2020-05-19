@@ -1,4 +1,4 @@
-#  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI                                                                                                                                                                                                                                                                                        
+#  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI.                                                                                                                                                                                                                                                                                          
 ![map](map2.png)
 
 ![map](stations2.png)
