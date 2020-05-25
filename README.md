@@ -6,12 +6,26 @@
 -----------------------------------------                                                                                                                                                                                   
 ### You can get the wavefoms from here: 
 
-https://rebrand.ly/waveforms-11-13-19  (this is a single hdf5 file ~ 89 GB)
+##### Each of the following files contains hdf5 (data) and csv (metadata) files for ~ 200k waveforms. You can download the chunks you need and then merge them into a single file using provided code in the repository. 
 
-### You can get the metadata from here :
-https://rebrand.ly/metadata-11-13-19   (this is a single csv file ~ 350 MB)
+https://rebrand.ly/chunk1  (chunk1 ~ 14.6 GB) Athmospheric and Anthropogenic Noise
+
+https://rebrand.ly/chunk2  (chunk2 ~ 13.7 GB) Local Earthquakes
+
+https://rebrand.ly/chunk3  (chunk3 ~ 13.7 GB) Local Earthquakes
+
+https://rebrand.ly/chunk4  (chunk4 ~ 13.7 GB) Local Earthquakes
+
+https://rebrand.ly/chunk5  (chunk5 ~ 13.7 GB) Local Earthquakes
+
+https://rebrand.ly/chunk6  (chunk6 ~ 15.7 GB) Local Earthquakes 
+
+##### If you have a fast internet you can download the entire dataset in a single file from here:
+
+https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
 * Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).
+
 
 ### You can get the paper from here:
 https://ieeexplore.ieee.org/abstract/document/8871127
@@ -20,7 +34,7 @@ https://ieeexplore.ieee.org/abstract/document/8871127
 mmousavi@stanford.edu
 
 ### Last Update:
-April 9, 2020
+May 25, 2020
 
 -------------------------------------
 Reference:
