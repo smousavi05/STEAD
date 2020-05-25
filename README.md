@@ -8,7 +8,7 @@
 
 ##### Each of the following files contains hdf5 (data) and csv (metadata) files for ~ 200k waveforms. You can download the chunks you need and then merge them into a single file using provided code in the repository. 
 
-https://rebrand.ly/chunk1  (chunk1 ~ 14.6 GB) Athmospheric and Anthropogenic Noise
+https://rebrand.ly/chunk1  (chunk1 ~ 14.6 GB) Noise
 
 https://rebrand.ly/chunk2  (chunk2 ~ 13.7 GB) Local Earthquakes
 
