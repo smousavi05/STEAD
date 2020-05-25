@@ -41,24 +41,7 @@ BibTeX:
     }
 
 -------------------------------------
-### classes and categories in the dataset
 
-    import h5py
-    import matplotlib.pyplot as plt
-    hdf_f = "STEAD.hdf5"
-    r = h5py.File(hdf_f, 'r')
-
-    for n in r:
-        print('class: ', n)
-        for nn in r[n]:
-            print('category: ', nn)
-
-class:  earthquake  
-category:  local   
-class:  non_earthquake   
-category:  noise   
-
-----------
 The csv file can be used to easily select specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency.
 
 ### Example of data selection and accessing (earthquake waveforms):
@@ -68,8 +51,8 @@ The csv file can be used to easily select specific part of the dataset and only 
         import numpy as np
         import matplotlib.pyplot as plt
 
-        file_name = "waveforms.hdf5"
-        csv_file = "metadata.csv"
+        file_name = "merge.hdf5"
+        csv_file = "merge.csv"
 
         # reading the csv file into a dataframe:
         df = pd.read_csv(csv_file)
@@ -84,7 +67,7 @@ The csv file can be used to easily select specific part of the dataset and only 
         # retrieving selected waveforms from the hdf5 file: 
         dtfl = h5py.File(file_name, 'r')
         for c, evi in enumerate(ev_list):
-            dataset = dtfl.get('earthquake/local/'+str(evi)) 
+            dataset = dtfl.get('data/'+str(evi)) 
             # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
             data = np.array(dataset)
 
@@ -187,9 +170,8 @@ The csv file can be used to easily select specific part of the dataset and only 
             return stream
 
         # reading one sample trace from STEAD
-        file_name = "dataset6/waveforms_12_20_19.hdf5"
         dtfl = h5py.File(file_name, 'r')
-        dataset = dtfl.get('earthquake/local/109C.TA_20061103161223_EV') 
+        dataset = dtfl.get('data/109C.TA_20061103161223_EV') 
 
         # convering hdf5 dataset into obspy sream
         st = make_stream(dataset)
@@ -268,14 +250,6 @@ The csv file can be used to easily select specific part of the dataset and only 
 For some of the noise data waveforms are identical for 3 components. These are related to single channel stations.
 However, these make up to less than 10 % of noise data. For the rest, noise are different for each channel.
 
-        import pandas as pd
-        import h5py
-        import numpy as np
-        import matplotlib.pyplot as plt
-
-        file_name = "waveforms.hdf5"
-        csv_file = "metadata.csv"
-
         # reading the csv file into a dataframe:
         df = pd.read_csv(csv_file)
         print(f'total events in csv file: {len(df)}')
@@ -289,7 +263,7 @@ However, these make up to less than 10 % of noise data. For the rest, noise are 
         # retrieving selected waveforms from the hdf5 file: 
         dtfl = h5py.File(file_name, 'r')
         for c, evi in enumerate(ev_list):
-            dataset = dtfl.get('non_earthquake/noise/'+str(evi)) 
+            dataset = dtfl.get('data/'+str(evi)) 
             # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
             data = np.array(dataset)
 
