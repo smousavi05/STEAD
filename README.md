@@ -316,7 +316,4 @@ However, these make up to less than 10 % of noise data. For the rest, noise are 
 
 ![event](noise.png)
 
-------------------------------------------------------
 
-# See the notebook for the dataset's property                                                                                  
-------------------------------------------------------
