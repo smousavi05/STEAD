@@ -24,7 +24,8 @@ https://rebrand.ly/chunk6  (chunk6 ~ 15.7 GB) Local Earthquakes
 
 https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
-* Note: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).
+* Note1: some of the unzipper programs for Windows and Linux operating systems have size limit. Try '7Zip' software if had problems unzipping the files. 
+* Note2: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).
 
 
 ### You can get the paper from here:
