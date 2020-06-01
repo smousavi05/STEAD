@@ -29,6 +29,8 @@ https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
 
 ### You can get the paper from here:
+https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
+or
 https://ieeexplore.ieee.org/abstract/document/8871127
 
 ### You can send your questions or suggestions to: 
