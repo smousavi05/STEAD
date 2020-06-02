@@ -25,8 +25,10 @@ https://rebrand.ly/chunk6  (chunk6 ~ 15.7 GB) Local Earthquakes
 https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
 * Note1: some of the unzipper programs for Windows and Linux operating systems have size limit. Try '7Zip' software if had problems unzipping the files. 
+
 * Note2: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).
 
+* Note3: For some of the noise data waveforms are identical for 3 components. These are related to single channel stations where we duplicated the vertical channel for horizontal ones. However, these make up to less than 4 % of noise data. For the rest, noise are different for each channel.
 
 ### You can get the paper from here:
 https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
@@ -146,10 +148,6 @@ The csv file can be used to easily select specific part of the dataset and only 
 -----------------------------------------                                                                                                                                                                                   
 
 ### Example of data selection and accessing (noise waveforms):
-#### Note:
-For some of the noise data waveforms are identical for 3 components. These are related to single channel stations.
-However, these make up to less than 10 % of noise data. For the rest, noise are different for each channel.
-
         # reading the csv file into a dataframe:
         df = pd.read_csv(csv_file)
         print(f'total events in csv file: {len(df)}')
