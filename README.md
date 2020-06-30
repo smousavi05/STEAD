@@ -1,4 +1,14 @@
-#  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI                                                                                                                                                                                                                                                                                                                                     
+#  STanford EArthquake Dataset (STEAD):A Global Data Set of Seismic Signals for AI                                                                                 
+
+![GitHub last commit](https://img.shields.io/github/last-commit/smousavi05/STEAD?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/smousavi05/STEAD?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/smousavi05/STEAD?style=for-the-badge)
+![GitHub watchers](https://img.shields.io/github/watchers/smousavi05/STEAD?style=for-the-badge)
+![GitHub followers](https://img.shields.io/github/followers/smousavi05?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/smousavi05?style=social)
+
+-----------------------------------------
+
 ![map](map2.png)
 
 ![map](stations2.png)
