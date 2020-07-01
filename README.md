@@ -15,7 +15,7 @@
 -----------------------------------------                                                                                                                                                                                   
 ### You can get the wavefoms from here: 
 
-##### Each of the following files contains one hdf5 (data) and one csv (metadata) files for ~ 200k 3C waveforms. You can download the chunks you need and then merge them into a single file using provided code in the repository. 
+##### Each of the following files contains one hdf5 (data) and one CSV (metadata) files for ~ 200k 3C waveforms. You can download the chunks you need and then merge them into a single file using the provided code in the repository.
 
 https://rebrand.ly/chunk1  (chunk1 ~ 14.6 GB) Noise
 
@@ -33,11 +33,11 @@ https://rebrand.ly/chunk6  (chunk6 ~ 15.7 GB) Local Earthquakes
 
 https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
-* Note1: some of the unzipper programs for Windows and Linux operating systems have size limit. Try '7Zip' software if had problems unzipping the files. 
+* Note1: some of the unzipper programs for Windows and Linux operating systems have size limits. Try '7Zip' software if had problems unzipping the files. 
 
-* Note2: all the metadata are aslo available in the hdf5 file (as attributes associated with each waveform).
+* Note2: all the metadata are also available in the hdf5 file (as attributes associated with each waveform).
 
-* Note3: For some of the noise data waveforms are identical for 3 components. These are related to single channel stations where we duplicated the vertical channel for horizontal ones. However, these make up to less than 4 % of noise data. For the rest, noise are different for each channel.
+* Note3: For some of the noise data waveforms are identical for 3 components. These are related to single-channel stations where we duplicated the vertical channel for horizontal ones. However, these makeup to less than 4 % of noise data. For the rest, noise is different for each channel.
 
 ### You can get the paper from here:
 https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
@@ -72,7 +72,7 @@ BibTeX:
 
 -------------------------------------
 
-The csv file can be used to easily select specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency.
+The CSV file can be used to easily select a specific part of the dataset and only read associated waveforms from the hdf5 file for efficiency.
 
 ### Example of data selection and accessing (earthquake waveforms):
 
@@ -158,6 +158,7 @@ for c, evi in enumerate(ev_list):
 -----------------------------------------                                                                                                                                                                                   
 
 ### Example of data selection and accessing (noise waveforms):
+
 ```python
 # reading the csv file into a dataframe:
 df = pd.read_csv(csv_file)
