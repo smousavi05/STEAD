@@ -76,79 +76,80 @@ The csv file can be used to easily select specific part of the dataset and only 
 
 ### Example of data selection and accessing (earthquake waveforms):
 
-        import pandas as pd
-        import h5py
-        import numpy as np
-        import matplotlib.pyplot as plt
+```python
+import pandas as pd
+import h5py
+import numpy as np
+import matplotlib.pyplot as plt
 
-        file_name = "merge.hdf5"
-        csv_file = "merge.csv"
+file_name = "merge.hdf5"
+csv_file = "merge.csv"
 
-        # reading the csv file into a dataframe:
-        df = pd.read_csv(csv_file)
-        print(f'total events in csv file: {len(df)}')
-        # filterering the dataframe
-        df = df[(df.trace_category == 'earthquake_local') & (df.source_distance_km <= 20) & (df.source_magnitude > 3)]
-        print(f'total events selected: {len(df)}')
+# reading the csv file into a dataframe:
+df = pd.read_csv(csv_file)
+print(f'total events in csv file: {len(df)}')
+# filterering the dataframe
+df = df[(df.trace_category == 'earthquake_local') & (df.source_distance_km <= 20) & (df.source_magnitude > 3)]
+print(f'total events selected: {len(df)}')
 
-        # making a list of trace names for the selected data
-        ev_list = df['trace_name'].to_list()
+# making a list of trace names for the selected data
+ev_list = df['trace_name'].to_list()
 
-        # retrieving selected waveforms from the hdf5 file: 
-        dtfl = h5py.File(file_name, 'r')
-        for c, evi in enumerate(ev_list):
-            dataset = dtfl.get('data/'+str(evi)) 
-            # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
-            data = np.array(dataset)
+# retrieving selected waveforms from the hdf5 file: 
+dtfl = h5py.File(file_name, 'r')
+for c, evi in enumerate(ev_list):
+    dataset = dtfl.get('data/'+str(evi)) 
+    # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
+    data = np.array(dataset)
 
-            fig = plt.figure()
-            ax = fig.add_subplot(311)         
-            plt.plot(data[:,0], 'k')
-            plt.rcParams["figure.figsize"] = (8, 5)
-            legend_properties = {'weight':'bold'}    
-            plt.tight_layout()
-            ymin, ymax = ax.get_ylim()
-            pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
-            sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
-            cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
-            plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
-            plt.ylabel('Amplitude counts', fontsize=12) 
-            ax.set_xticklabels([])
+    fig = plt.figure()
+    ax = fig.add_subplot(311)         
+    plt.plot(data[:,0], 'k')
+    plt.rcParams["figure.figsize"] = (8, 5)
+    legend_properties = {'weight':'bold'}    
+    plt.tight_layout()
+    ymin, ymax = ax.get_ylim()
+    pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
+    sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
+    cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
+    plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
+    plt.ylabel('Amplitude counts', fontsize=12) 
+    ax.set_xticklabels([])
 
-            ax = fig.add_subplot(312)         
-            plt.plot(data[:,1], 'k')
-            plt.rcParams["figure.figsize"] = (8, 5)
-            legend_properties = {'weight':'bold'}    
-            plt.tight_layout()
-            ymin, ymax = ax.get_ylim()
-            pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
-            sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
-            cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
-            plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
-            plt.ylabel('Amplitude counts', fontsize=12) 
-            ax.set_xticklabels([])
+    ax = fig.add_subplot(312)         
+    plt.plot(data[:,1], 'k')
+    plt.rcParams["figure.figsize"] = (8, 5)
+    legend_properties = {'weight':'bold'}    
+    plt.tight_layout()
+    ymin, ymax = ax.get_ylim()
+    pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
+    sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
+    cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
+    plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
+    plt.ylabel('Amplitude counts', fontsize=12) 
+    ax.set_xticklabels([])
 
-            ax = fig.add_subplot(313)         
-            plt.plot(data[:,2], 'k')
-            plt.rcParams["figure.figsize"] = (8,5)
-            legend_properties = {'weight':'bold'}    
-            plt.tight_layout()
-            ymin, ymax = ax.get_ylim()
-            pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
-            sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
-            cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
-            plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
-            plt.ylabel('Amplitude counts', fontsize=12) 
-            ax.set_xticklabels([])
-            plt.show() 
+    ax = fig.add_subplot(313)         
+    plt.plot(data[:,2], 'k')
+    plt.rcParams["figure.figsize"] = (8,5)
+    legend_properties = {'weight':'bold'}    
+    plt.tight_layout()
+    ymin, ymax = ax.get_ylim()
+    pl = plt.vlines(dataset.attrs['p_arrival_sample'], ymin, ymax, color='b', linewidth=2, label='P-arrival')
+    sl = plt.vlines(dataset.attrs['s_arrival_sample'], ymin, ymax, color='r', linewidth=2, label='S-arrival')
+    cl = plt.vlines(dataset.attrs['coda_end_sample'], ymin, ymax, color='aqua', linewidth=2, label='Coda End')
+    plt.legend(handles=[pl, sl, cl], loc = 'upper right', borderaxespad=0., prop=legend_properties)        
+    plt.ylabel('Amplitude counts', fontsize=12) 
+    ax.set_xticklabels([])
+    plt.show() 
 
-            for at in dataset.attrs:
-                print(at, dataset.attrs[at])    
+    for at in dataset.attrs:
+        print(at, dataset.attrs[at])    
 
-            inp = input("Press a key to plot the next waveform!")
-            if inp == "r":
-                continue             
-
+    inp = input("Press a key to plot the next waveform!")
+    if inp == "r":
+        continue             
+```
 
 ![event](eventSample.png)
 
@@ -157,55 +158,57 @@ The csv file can be used to easily select specific part of the dataset and only 
 -----------------------------------------                                                                                                                                                                                   
 
 ### Example of data selection and accessing (noise waveforms):
-        # reading the csv file into a dataframe:
-        df = pd.read_csv(csv_file)
-        print(f'total events in csv file: {len(df)}')
-        # filterering the dataframe
-        df = df[(df.trace_category == 'noise') & (df.receiver_code == 'PHOB') ]
-        print(f'total events selected: {len(df)}')
+```python
+# reading the csv file into a dataframe:
+df = pd.read_csv(csv_file)
+print(f'total events in csv file: {len(df)}')
+# filterering the dataframe
+df = df[(df.trace_category == 'noise') & (df.receiver_code == 'PHOB') ]
+print(f'total events selected: {len(df)}')
 
-        # making a list of trace names for the selected data
-        ev_list = df['trace_name'].to_list()[:200]
+# making a list of trace names for the selected data
+ev_list = df['trace_name'].to_list()[:200]
 
-        # retrieving selected waveforms from the hdf5 file: 
-        dtfl = h5py.File(file_name, 'r')
-        for c, evi in enumerate(ev_list):
-            dataset = dtfl.get('data/'+str(evi)) 
-            # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
-            data = np.array(dataset)
+# retrieving selected waveforms from the hdf5 file: 
+dtfl = h5py.File(file_name, 'r')
+for c, evi in enumerate(ev_list):
+    dataset = dtfl.get('data/'+str(evi)) 
+    # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
+    data = np.array(dataset)
 
-            fig = plt.figure()
-            ax = fig.add_subplot(311)         
-            plt.plot(data[:,0], 'k')
-            plt.rcParams["figure.figsize"] = (8, 5)
-            legend_properties = {'weight':'bold'}    
-            plt.tight_layout()
-            plt.ylabel('Amplitude counts', fontsize=12) 
-            ax.set_xticklabels([])
+    fig = plt.figure()
+    ax = fig.add_subplot(311)         
+    plt.plot(data[:,0], 'k')
+    plt.rcParams["figure.figsize"] = (8, 5)
+    legend_properties = {'weight':'bold'}    
+    plt.tight_layout()
+    plt.ylabel('Amplitude counts', fontsize=12) 
+    ax.set_xticklabels([])
 
-            ax = fig.add_subplot(312)         
-            plt.plot(data[:,1], 'k')
-            plt.rcParams["figure.figsize"] = (8, 5)
-            legend_properties = {'weight':'bold'}    
-            plt.tight_layout()     
-            plt.ylabel('Amplitude counts', fontsize=12) 
-            ax.set_xticklabels([])
+    ax = fig.add_subplot(312)         
+    plt.plot(data[:,1], 'k')
+    plt.rcParams["figure.figsize"] = (8, 5)
+    legend_properties = {'weight':'bold'}    
+    plt.tight_layout()     
+    plt.ylabel('Amplitude counts', fontsize=12) 
+    ax.set_xticklabels([])
 
-            ax = fig.add_subplot(313)         
-            plt.plot(data[:,2], 'k')
-            plt.rcParams["figure.figsize"] = (8,5)
-            legend_properties = {'weight':'bold'}    
-            plt.tight_layout()     
-            plt.ylabel('Amplitude counts', fontsize=12) 
-            ax.set_xticklabels([])
-            plt.show() 
+    ax = fig.add_subplot(313)         
+    plt.plot(data[:,2], 'k')
+    plt.rcParams["figure.figsize"] = (8,5)
+    legend_properties = {'weight':'bold'}    
+    plt.tight_layout()     
+    plt.ylabel('Amplitude counts', fontsize=12) 
+    ax.set_xticklabels([])
+    plt.show() 
 
-            for at in dataset.attrs:
-                print(at, dataset.attrs[at])    
+    for at in dataset.attrs:
+        print(at, dataset.attrs[at])    
 
-            inp = input("Press a key to plot the next waveform!")
-            if inp == "r":
-                continue       
+    inp = input("Press a key to plot the next waveform!")
+    if inp == "r":
+        continue       
+```
 
 ![event](noise.png)
 
@@ -213,118 +216,126 @@ The csv file can be used to easily select specific part of the dataset and only 
 
 ### How to convert raw waveforms into Acceleration, Velocity, or Displacement:
 
-        import obspy
-        import h5py
-        from obspy import UTCDateTime
-        import numpy as np
-        from obspy.clients.fdsn.client import Client
-        import matplotlib.pyplot as plt
+```python
+import obspy
+import h5py
+from obspy import UTCDateTime
+import numpy as np
+from obspy.clients.fdsn.client import Client
+import matplotlib.pyplot as plt
 
-        def make_stream(dataset):
-            '''
-            input: hdf5 dataset
-            output: obspy stream
+def make_stream(dataset):
+    '''
+    input: hdf5 dataset
+    output: obspy stream
 
-            '''
-            data = np.array(dataset)
+    '''
+    data = np.array(dataset)
 
-            tr_E = obspy.Trace(data=data[:, 0])
-            tr_E.stats.starttime = UTCDateTime(dataset.attrs['trace_start_time'])
-            tr_E.stats.delta = 0.01
-            tr_E.stats.channel = dataset.attrs['receiver_type']+'E'
-            tr_E.stats.station = dataset.attrs['receiver_code']
-            tr_E.stats.network = dataset.attrs['network_code']
+    tr_E = obspy.Trace(data=data[:, 0])
+    tr_E.stats.starttime = UTCDateTime(dataset.attrs['trace_start_time'])
+    tr_E.stats.delta = 0.01
+    tr_E.stats.channel = dataset.attrs['receiver_type']+'E'
+    tr_E.stats.station = dataset.attrs['receiver_code']
+    tr_E.stats.network = dataset.attrs['network_code']
 
-            tr_N = obspy.Trace(data=data[:, 1])
-            tr_N.stats.starttime = UTCDateTime(dataset.attrs['trace_start_time'])
-            tr_N.stats.delta = 0.01
-            tr_N.stats.channel = dataset.attrs['receiver_type']+'N'
-            tr_N.stats.station = dataset.attrs['receiver_code']
-            tr_N.stats.network = dataset.attrs['network_code']
+    tr_N = obspy.Trace(data=data[:, 1])
+    tr_N.stats.starttime = UTCDateTime(dataset.attrs['trace_start_time'])
+    tr_N.stats.delta = 0.01
+    tr_N.stats.channel = dataset.attrs['receiver_type']+'N'
+    tr_N.stats.station = dataset.attrs['receiver_code']
+    tr_N.stats.network = dataset.attrs['network_code']
 
-            tr_Z = obspy.Trace(data=data[:, 2])
-            tr_Z.stats.starttime = UTCDateTime(dataset.attrs['trace_start_time'])
-            tr_Z.stats.delta = 0.01
-            tr_Z.stats.channel = dataset.attrs['receiver_type']+'Z'
-            tr_Z.stats.station = dataset.attrs['receiver_code']
-            tr_Z.stats.network = dataset.attrs['network_code']
+    tr_Z = obspy.Trace(data=data[:, 2])
+    tr_Z.stats.starttime = UTCDateTime(dataset.attrs['trace_start_time'])
+    tr_Z.stats.delta = 0.01
+    tr_Z.stats.channel = dataset.attrs['receiver_type']+'Z'
+    tr_Z.stats.station = dataset.attrs['receiver_code']
+    tr_Z.stats.network = dataset.attrs['network_code']
 
-            stream = obspy.Stream([tr_E, tr_N, tr_Z])
+    stream = obspy.Stream([tr_E, tr_N, tr_Z])
 
-            return stream
+    return stream
 
-        # reading one sample trace from STEAD
-        dtfl = h5py.File(file_name, 'r')
-        dataset = dtfl.get('data/109C.TA_20061103161223_EV') 
+# reading one sample trace from STEAD
+dtfl = h5py.File(file_name, 'r')
+dataset = dtfl.get('data/109C.TA_20061103161223_EV') 
 
-        # convering hdf5 dataset into obspy sream
-        st = make_stream(dataset)
-        # ploting the verical component of the raw data
-        tr_Z = st[2]
-        fig = plt.figure()
-        ax = fig.add_subplot(1, 1, 1)
-        ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-        ax.xaxis_date()
-        fig.autofmt_xdate()
-        plt.ylabel('counts')
-        plt.title('Raw Data')
-        plt.show()
-        
+# convering hdf5 dataset into obspy sream
+st = make_stream(dataset)
+# ploting the verical component of the raw data
+tr_Z = st[2]
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
+ax.xaxis_date()
+fig.autofmt_xdate()
+plt.ylabel('counts')
+plt.title('Raw Data')
+plt.show()
+```
+
 ![raw](1_raw.png)
 
-        # downloading the instrument response of the station from IRIS
-        client = Client("IRIS")
-        inventory = client.get_stations(network=dataset.attrs['network_code'],
-                                        station=dataset.attrs['receiver_code'],
-                                        starttime=UTCDateTime(dataset.attrs['trace_start_time']),
-                                        endtime=UTCDateTime(dataset.attrs['trace_start_time']) + 60,
-                                        loc="*", 
-                                        channel="*",
-                                        level="response")  
- 
-        # converting into displacement
-        st = make_stream(dataset)
-        st = st.remove_response(inventory=inventory, output="DISP", plot=False)
-        tr_Z = st[2]
-        fig = plt.figure()
-        ax = fig.add_subplot(1, 1, 1)
-        ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-        ax.xaxis_date()
-        fig.autofmt_xdate()
-        plt.ylabel('meters')
-        plt.title('Displacement')
-        plt.show()
+```python
+# downloading the instrument response of the station from IRIS
+client = Client("IRIS")
+inventory = client.get_stations(network=dataset.attrs['network_code'],
+                                station=dataset.attrs['receiver_code'],
+                                starttime=UTCDateTime(dataset.attrs['trace_start_time']),
+                                endtime=UTCDateTime(dataset.attrs['trace_start_time']) + 60,
+                                loc="*", 
+                                channel="*",
+                                level="response")  
+
+# converting into displacement
+st = make_stream(dataset)
+st = st.remove_response(inventory=inventory, output="DISP", plot=False)
+tr_Z = st[2]
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
+ax.xaxis_date()
+fig.autofmt_xdate()
+plt.ylabel('meters')
+plt.title('Displacement')
+plt.show()
+```
 
 ![disp](1_disp.png)
 
-        # converting into velocity
-        st = make_stream(dataset)
-        st = st.remove_response(inventory=inventory, output='VEL', plot=False) 
-        tr_Z = st[2]
-        fig = plt.figure()
-        ax = fig.add_subplot(1, 1, 1)
-        ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-        ax.xaxis_date()
-        fig.autofmt_xdate()
-        plt.ylabel('meters/second')
-        plt.title('Velocity')
-        plt.show()
+```python
+# converting into velocity
+st = make_stream(dataset)
+st = st.remove_response(inventory=inventory, output='VEL', plot=False) 
+tr_Z = st[2]
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
+ax.xaxis_date()
+fig.autofmt_xdate()
+plt.ylabel('meters/second')
+plt.title('Velocity')
+plt.show()
+```
         
 ![vel](1_vel.png)
 
-        # converting into acceleration
-        st = make_stream(dataset)
-        st.remove_response(inventory=inventory, output="ACC", plot=False) 
-        tr_Z = st[2]
-        fig = plt.figure()
-        ax = fig.add_subplot(1, 1, 1)
-        ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-        ax.xaxis_date()
-        fig.autofmt_xdate()
-        plt.ylabel('meters/second**2')
-        plt.title('Acceleration')
-        plt.show()
-        
+```python
+# converting into acceleration
+st = make_stream(dataset)
+st.remove_response(inventory=inventory, output="ACC", plot=False) 
+tr_Z = st[2]
+fig = plt.figure()
+ax = fig.add_subplot(1, 1, 1)
+ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
+ax.xaxis_date()
+fig.autofmt_xdate()
+plt.ylabel('meters/second**2')
+plt.title('Acceleration')
+plt.show()
+```
+
 ![acc](1_acc.png)
 
 
