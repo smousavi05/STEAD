@@ -39,6 +39,32 @@ https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
 * Note3: For some of the noise data waveforms are identical for 3 components. These are related to single-channel stations where we duplicated the vertical channel for horizontal ones. However, these makeup to less than 4 % of noise data. For the rest, noise is different for each channel.
 
+### If you had trouble downloading the data from above links or unzipping them, you can download the hdf5 and CSV files from following links:
+
+chunk1:
+https://mega.nz/file/mUhhRb6R#YjaX3ik18ps3JlKDfNGZONodMT6JDsSrcBIZkAPPQQU
+https://mega.nz/file/6YoXjThT#chwK8lG8pAheUVdFlojEMdSiOuk0n186JjFFnGIhFdo
+
+chunk2:
+https://mega.nz/file/DUxVUJgT#v84CJIRxTAe8UIW4zuDub4jJ8d3hQ1kTd4975qR7KD8
+https://mega.nz/file/nR4hTJiA#yOconXY8bFva0AU1gPsbzLDKY4XKN0E-vNhsQvAzn2I
+
+chunk3:
+https://mega.nz/file/6FwhWZjA#Wx_vh15oH1Mn2cN1uSVMjQL98lkasSZgo-sxxwoq7N8
+
+cunk4:
+https://mega.nz/file/bIgRDBrK#8_svPKk8XUxmWK46glg3Kviy0UamI9LxIuTmekXlEoY
+https://mega.nz/file/XZ4zCDrA#vpdQ522ipOP3T0a36_INKsWPNfOhNIOAD_IeskreIDY
+
+chunk5:
+https://mega.nz/file/qdhH3BzI#ROpK80yG3fHWX7PNX0mqahYNqEyycc2K0_jG-KT5jks
+https://mega.nz/file/XYhTgTSK#cwNc8_x52FHBlZvTYpO9PbVNSMuqo-ZfMAvAg1NbDjw
+
+chunk6:
+https://mega.nz/file/HE41jTab#SeF3-zIvm5U6CMuytVJeRtgwupgqP_qRaE7um-ch-wE
+https://mega.nz/file/7IhnSZgA#19zO4yc8Lq-A3euoYiUExZALWxfYR1kpq6bZVd67WSk
+
+
 ### You can get the paper from here:
 https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
 
