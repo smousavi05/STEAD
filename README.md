@@ -78,7 +78,7 @@ https://mega.nz/file/HE41jTab#SeF3-zIvm5U6CMuytVJeRtgwupgqP_qRaE7um-ch-wE
 https://mega.nz/file/7IhnSZgA#19zO4yc8Lq-A3euoYiUExZALWxfYR1kpq6bZVd67WSk
 
 
-#### Direct link to the entire dataset:
+#### Direct link to the entire dataset (91.44 GB):
 
 https://mega.nz/folder/HNwm0SLY#h70tuXK2tpiQJAaPq72FFQ
 
