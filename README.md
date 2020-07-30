@@ -41,23 +41,20 @@ https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
 ### If you had trouble downloading the data from above links or unzipping them, you can download the hdf5 and CSV files from following links:
 
-chunk1:
+chunk1 (16.68 GB):
 
-https://mega.nz/file/mUhhRb6R#YjaX3ik18ps3JlKDfNGZONodMT6JDsSrcBIZkAPPQQU
+https://mega.nz/folder/LE4SXaLA#layy0EFVX14PTC-JTeb_Kw
 
-https://mega.nz/file/6YoXjThT#chwK8lG8pAheUVdFlojEMdSiOuk0n186JjFFnGIhFdo
 
-chunk2:
+chunk2 (14.18):
 
-https://mega.nz/file/DUxVUJgT#v84CJIRxTAe8UIW4zuDub4jJ8d3hQ1kTd4975qR7KD8
+https://mega.nz/folder/2dJCzSIL#84wir3APWqVHbJ9ba7jsrA
 
-https://mega.nz/file/nR4hTJiA#yOconXY8bFva0AU1gPsbzLDKY4XKN0E-vNhsQvAzn2I
 
-chunk3:
+chunk3 (14.18):
 
-https://mega.nz/file/6FwhWZjA#Wx_vh15oH1Mn2cN1uSVMjQL98lkasSZgo-sxxwoq7N8
+https://mega.nz/folder/LEg2zSQT#DY89s3XQnIWnTlb7al7mLA
 
-https://mega.nz/file/3ZRR1KDb#US-ORA3vgwy2JBOm_lgB_sSSr4lgstTj34BadebwBNk
 
 cunk4:
 
