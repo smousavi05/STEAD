@@ -78,6 +78,12 @@ https://mega.nz/file/HE41jTab#SeF3-zIvm5U6CMuytVJeRtgwupgqP_qRaE7um-ch-wE
 https://mega.nz/file/7IhnSZgA#19zO4yc8Lq-A3euoYiUExZALWxfYR1kpq6bZVd67WSk
 
 
+#### Direct link to the entire dataset:
+
+https://mega.nz/folder/HNwm0SLY#h70tuXK2tpiQJAaPq72FFQ
+
+-----------------------------------
+
 ### You can get the paper from here:
 https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
 
