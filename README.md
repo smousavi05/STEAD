@@ -300,23 +300,35 @@ def make_stream(dataset):
     stream = obspy.Stream([tr_E, tr_N, tr_Z])
 
     return stream
+ 
+ def make_plot(tr, title='', ylab=''):
+    '''
+    input: trace
+    
+    '''
+    
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+    ax.plot(tr.times("matplotlib"), tr.data, "k-")
+    ax.xaxis_date()
+    fig.autofmt_xdate()
+    plt.ylabel('counts')
+    plt.title('Raw Data')
+    plt.show()
+    
+    
+if __name__ == '__main__': 
 
-# reading one sample trace from STEAD
-dtfl = h5py.File(file_name, 'r')
-dataset = dtfl.get('data/109C.TA_20061103161223_EV') 
+    # reading one sample trace from STEAD
+    dtfl = h5py.File(file_name, 'r')
+    dataset = dtfl.get('data/109C.TA_20061103161223_EV') 
 
-# convering hdf5 dataset into obspy sream
-st = make_stream(dataset)
-# ploting the verical component of the raw data
-tr_Z = st[2]
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-ax.xaxis_date()
-fig.autofmt_xdate()
-plt.ylabel('counts')
-plt.title('Raw Data')
-plt.show()
+    # convering hdf5 dataset into obspy sream
+    st = make_stream(dataset)
+    
+    # ploting the verical component of the raw data
+    make_plot(st[2], title='Raw Data', ylab='counts')
+
 ```
 
 ![raw](1_raw.png)
