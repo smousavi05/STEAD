@@ -64,11 +64,8 @@ Direct link to the entire dataset (91.44 GB): https://mega.nz/folder/HNwm0SLY#h7
 -----------------------------------
 
 ### You can get the paper from here:
-https://www.researchgate.net/publication/336598670_STanford_EArthquake_Dataset_STEAD_A_Global_Data_Set_of_Seismic_Signals_for_AI
 
-or
-
-https://ieeexplore.ieee.org/abstract/document/8871127
+https://rebrand.ly/STEADrg   or   https://rebrand.ly/STEADac
 
 
 ### Last Update in the Dataset:
