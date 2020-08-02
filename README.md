@@ -334,62 +334,46 @@ if __name__ == '__main__':
 ![raw](1_raw.png)
 
 ```python
-# downloading the instrument response of the station from IRIS
-client = Client("IRIS")
-inventory = client.get_stations(network=dataset.attrs['network_code'],
-                                station=dataset.attrs['receiver_code'],
-                                starttime=UTCDateTime(dataset.attrs['trace_start_time']),
-                                endtime=UTCDateTime(dataset.attrs['trace_start_time']) + 60,
-                                loc="*", 
-                                channel="*",
-                                level="response")  
 
-# converting into displacement
-st = make_stream(dataset)
-st = st.remove_response(inventory=inventory, output="DISP", plot=False)
-tr_Z = st[2]
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-ax.xaxis_date()
-fig.autofmt_xdate()
-plt.ylabel('meters')
-plt.title('Displacement')
-plt.show()
+    # downloading the instrument response of the station from IRIS
+    client = Client("IRIS")
+    inventory = client.get_stations(network=dataset.attrs['network_code'],
+                                    station=dataset.attrs['receiver_code'],
+                                    starttime=UTCDateTime(dataset.attrs['trace_start_time']),
+                                    endtime=UTCDateTime(dataset.attrs['trace_start_time']) + 60,
+                                    loc="*", 
+                                    channel="*",
+                                    level="response")  
+
+    # converting into displacement
+    st = make_stream(dataset)
+    st = st.remove_response(inventory=inventory, output="DISP", plot=False)
+
+    # ploting the verical component
+    make_plot(st[2], title='Displacement', ylab='meters')
+    
 ```
 
 ![disp](1_disp.png)
 
 ```python
-# converting into velocity
-st = make_stream(dataset)
-st = st.remove_response(inventory=inventory, output='VEL', plot=False) 
-tr_Z = st[2]
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-ax.xaxis_date()
-fig.autofmt_xdate()
-plt.ylabel('meters/second')
-plt.title('Velocity')
-plt.show()
+    # converting into velocity
+    st = make_stream(dataset)
+    st = st.remove_response(inventory=inventory, output='VEL', plot=False) 
+    
+    # ploting the verical component
+    make_plot(st[2], title='Velocity', ylab='meters/second')
 ```
         
 ![vel](1_vel.png)
 
 ```python
-# converting into acceleration
-st = make_stream(dataset)
-st.remove_response(inventory=inventory, output="ACC", plot=False) 
-tr_Z = st[2]
-fig = plt.figure()
-ax = fig.add_subplot(1, 1, 1)
-ax.plot(tr_Z.times("matplotlib"), tr_Z.data, "k-")
-ax.xaxis_date()
-fig.autofmt_xdate()
-plt.ylabel('meters/second**2')
-plt.title('Acceleration')
-plt.show()
+    # converting into acceleration
+    st = make_stream(dataset)
+    st.remove_response(inventory=inventory, output="ACC", plot=False) 
+    
+    # ploting the verical component
+    make_plot(st[2], title='Acceleration', ylab='meters/second**2')
 ```
 
 ![acc](1_acc.png)
