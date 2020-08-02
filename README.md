@@ -88,6 +88,13 @@ https://ieeexplore.ieee.org/abstract/document/8871127
 ### Last Update in the Dataset:
 May 25, 2020 
 
+
+### Reporting Bugs:
+
+Report bugs at https://github.com/smousavi05/STEAD/issues.
+
+or send me an email: mmousavi@stanford.edu
+
 -------------------------------------
 Reference:
 
