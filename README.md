@@ -84,10 +84,8 @@ or
 
 https://ieeexplore.ieee.org/abstract/document/8871127
 
-### You can send your questions or suggestions to: 
-mmousavi@stanford.edu
 
-### Last Update:
+### Last Update in the Dataset:
 May 25, 2020 
 
 -------------------------------------
