@@ -59,9 +59,7 @@ chunk5 (14.18): https://mega.nz/folder/KZxyTIZA#OaVZSXkF8t7Vw6qiX6s3oQ
 chunk6 (16.32): https://mega.nz/folder/KJAkzAjL#29LogjJMRrCi9Ud6nsiu5g
 
 
-#### Direct link to the entire dataset (91.44 GB):
-
-https://mega.nz/folder/HNwm0SLY#h70tuXK2tpiQJAaPq72FFQ
+Direct link to the entire dataset (91.44 GB): https://mega.nz/folder/HNwm0SLY#h70tuXK2tpiQJAaPq72FFQ
 
 -----------------------------------
 
