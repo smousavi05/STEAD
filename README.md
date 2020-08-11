@@ -355,6 +355,23 @@ if __name__ == '__main__':
 
 ![acc](1_acc.png)
 
+------------------------------------------
+
+### Some of the studies in which STEAD was used:
+
+*   Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking
+    SM Mousavi, WL Ellsworth, W Zhu, LY Chuang, GC Beroza
+    Nature Communications 11 (1), 1-12
+
+*   Bayesian-deep-learning estimation of earthquake location from single-station observations
+    SM Mousavi, GC Beroza
+    IEEE Transactions on Geoscience and Remote Sensing, 1 - 14
+    
+*   A machine‐learning approach for earthquake magnitude estimation
+    SM Mousavi, GC Beroza
+    Geophysical Research Letters 47 (1), e2019GL085976
+
+
 
 
 
