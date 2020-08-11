@@ -357,7 +357,7 @@ if __name__ == '__main__':
 
 ------------------------------------------
 
-### Some of the studies in which STEAD was used:
+### Some of the studies that used STEAD:
 
 *   Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking,
     SM Mousavi, WL Ellsworth, W Zhu, LY Chuang, GC Beroza, Nature Communications 11 (1), 1-12.
