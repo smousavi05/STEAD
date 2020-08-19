@@ -357,7 +357,7 @@ if __name__ == '__main__':
 
 ------------------------------------------
 
-### Some of the studies that used STEAD:
+### These are some of the studies that used STEAD. You can check out the code repository of these studies as examples of how a Keras or Tensorflow model can be trained by STEAD in a memory efficient fashion:
 
 *   Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking,
     SM Mousavi, WL Ellsworth, W Zhu, LY Chuang, GC Beroza, Nature Communications 11 (1), 1-12.
