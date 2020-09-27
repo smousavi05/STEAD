@@ -119,7 +119,7 @@ ev_list = df['trace_name'].to_list()
 dtfl = h5py.File(file_name, 'r')
 for c, evi in enumerate(ev_list):
     dataset = dtfl.get('data/'+str(evi)) 
-    # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
+    # waveforms, 3 channels: first row: E channel, second row: N channel, third row: Z channel 
     data = np.array(dataset)
 
     fig = plt.figure()
@@ -194,7 +194,7 @@ ev_list = df['trace_name'].to_list()[:200]
 dtfl = h5py.File(file_name, 'r')
 for c, evi in enumerate(ev_list):
     dataset = dtfl.get('data/'+str(evi)) 
-    # waveforms, 3 channels: first row: E channle, second row: N channel, third row: Z channel 
+    # waveforms, 3 channels: first row: E channel, second row: N channel, third row: Z channel 
     data = np.array(dataset)
 
     fig = plt.figure()
