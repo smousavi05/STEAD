@@ -29,7 +29,7 @@ https://rebrand.ly/chunk5  (chunk5 ~ 13.7 GB) Local Earthquakes
 
 https://rebrand.ly/chunk6  (chunk6 ~ 15.7 GB) Local Earthquakes 
 
-##### If you have a fast internet you can download the entire dataset in a single file using following links:
+#### If you have a fast internet you can download the entire dataset in a single file using following links:
 
 https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
