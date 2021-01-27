@@ -39,7 +39,7 @@ https://rebrand.ly/whole (merged ~ 85 GB) Local Earthquakes + Noise
 
 * Note3: For some of the noise data waveforms are identical for 3 components. These are related to single-channel stations where we duplicated the vertical channel for horizontal ones. However, these makeup to less than 4 % of noise data. For the rest, noise is different for each channel.
 
-### If you had trouble downloading the data from above links or unzipping them, you can download the hdf5 and CSV files from following links:
+#### If you had trouble downloading the data from above links or unzipping them, you can download the hdf5 and CSV files from following links:
 
 chunk1 (16.68 GB): https://mega.nz/folder/LE4SXaLA#layy0EFVX14PTC-JTeb_Kw
 
