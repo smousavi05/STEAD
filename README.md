@@ -368,7 +368,7 @@ if __name__ == '__main__':
 *   A machine‐learning approach for earthquake magnitude estimation,
     SM Mousavi, GC Beroza, Geophysical Research Letters 47 (1), e2019GL085976.
 
-
-
+*   Complex Neural Networks for Estimating Epicentral Distance, Depth, and Magnitude of Seismic Waves,
+    Ristea, Nicolae-Cătălin, and Anamaria Radoi., IEEE Geoscience and Remote Sensing Letters.
 
 
