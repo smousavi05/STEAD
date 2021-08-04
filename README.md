@@ -19,7 +19,7 @@
 * [How to access the earthquake waveforms](#Example_of_data_selection_and_accessing_(earthquake_waveforms)) 
 * [How to access the noise waveforms](#Example_of_data_selection_and_accessing_(noise_waveforms))                   
 * [How to convert raw waveforms into acceleration, velocity, or displacement](#How_to_convert_raw_waveforms_into_Acceleration,_Velocity,_or_Displacement)  
-* [Studies that used STEAD](#These_are_some_of_the_studies_that_used_STEAD)            
+* [Studies that used STEAD](#### These_are_some_of_the_studies_that_used_STEAD.)            
 -----------
 
 ### You can get the wavefoms from here: 
