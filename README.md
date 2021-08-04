@@ -13,6 +13,7 @@
 ![map](stations2.png)
 
 ----------------------------------------- 
+## Table of Contents: 
 * [Downloading the dataset](#You_can_get_the_wavefoms_from_here) 
 * [Description of the dataset](#You_can_get_the_paper_from_here)                                
 * [How to access the earthquake waveforms](#Example_of_data_selection_and_accessing_(earthquake_waveforms)) 
