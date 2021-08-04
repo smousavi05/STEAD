@@ -12,7 +12,15 @@
 
 ![map](stations2.png)
 
------------------------------------------                                                                                                                                                                                   
+----------------------------------------- 
+* [Downloading the dataset](#You can get the wavefoms from here) 
+* [Description of the dataset](#You can get the paper from here)                                
+* [How to access the earthquake waveforms](#Example of data selection and accessing (earthquake waveforms)) 
+* [How to access the noise waveforms](#Example of data selection and accessing (noise waveforms))                   
+* [How to convert raw waveforms into acceleration, velocity, or displacement](#How to convert raw waveforms into Acceleration, Velocity, or Displacement)  
+* [Studies that used STEAD](#These are some of the studies that used STEAD)            
+-----------
+
 ### You can get the wavefoms from here: 
 
 ##### Each of the following files contains one hdf5 (data) and one CSV (metadata) files for ~ 200k 3C waveforms. You can download the chunks you need and then merge them into a single file using the provided code in the repository.
@@ -357,7 +365,8 @@ if __name__ == '__main__':
 
 ------------------------------------------
 
-### These are some of the studies that used STEAD. You can check out the code repository of these studies as examples of how a Keras or Tensorflow model can be trained by STEAD in a memory efficient fashion:
+### These are some of the studies that used STEAD. 
+You can check out the code repository of these studies as examples of how a Keras or Tensorflow model can be trained by STEAD in a memory efficient fashion:
 
 *   Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking,
     SM Mousavi, WL Ellsworth, W Zhu, LY Chuang, GC Beroza, Nature Communications 11 (1), 1-12.
