@@ -14,11 +14,11 @@
 
 ----------------------------------------- 
 * [Downloading the dataset](#You_can_get_the_wavefoms_from_here) 
-* [Description of the dataset](#You can get the paper from here)                                
-* [How to access the earthquake waveforms](#Example of data selection and accessing (earthquake waveforms)) 
-* [How to access the noise waveforms](#Example of data selection and accessing (noise waveforms))                   
-* [How to convert raw waveforms into acceleration, velocity, or displacement](#How to convert raw waveforms into Acceleration, Velocity, or Displacement)  
-* [Studies that used STEAD](#These are some of the studies that used STEAD)            
+* [Description of the dataset](#You_can_get_the_paper_from_here)                                
+* [How to access the earthquake waveforms](#Example_of_data_selection_and_accessing_(earthquake_waveforms)) 
+* [How to access the noise waveforms](#Example_of_data_selection_and_accessing_(noise_waveforms))                   
+* [How to convert raw waveforms into acceleration, velocity, or displacement](#How_to_convert_raw_waveforms_into_Acceleration,_Velocity,_or_Displacement)  
+* [Studies that used STEAD](#These_are_some_of_the_studies_that_used_STEAD)            
 -----------
 
 ### You can get the wavefoms from here: 
