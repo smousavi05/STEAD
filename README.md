@@ -70,6 +70,9 @@ Direct link to the entire dataset (91.44 GB): https://mega.nz/folder/HNwm0SLY#h7
 
 https://rebrand.ly/STEADrg   or   https://rebrand.ly/STEADac
 
+### You can use QuakeLabeler to labele and convert your data into STEAD format:
+https://maihao14.github.io/QuakeLabeler/
+
 
 ### Last Update in the Dataset:
 May 25, 2020 
