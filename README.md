@@ -25,16 +25,13 @@
 #### Please note that some of the back azimuths in the current version have been misplaced. If you plan to use back azimuth labels you can recalculate it based on station and event location. Here is code to do so using Obspy:
 
 ```python
-distanceKm, azimuth, back_azimuth = obspy.geodetics.base.gps2dist_azimuth(
+distanceM, azimuth, back_azimuth = obspy.geodetics.base.gps2dist_azimuth(
                                                                         float(event_lat), 
                                                                         float(event_lon),
                                                                         float(station_lat), 
                                                                         float(station_lon), 
                                                                         a=6378137.0, 
                                                                         f=0.0033528106647474805)
-            distanceKm = (distanceKm/1000);
-            distance = round((distanceKm / 111), 4);
-            back_azimuth = round(back_azimuth, 4)
 ```            
 
 ### You can get the wavefoms from here: 
