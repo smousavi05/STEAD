@@ -25,7 +25,7 @@
 #### Please note that some of the back azimuths in the current version have been misplaced. If you plan to use back azimuth labels you can recalculate it based on station and event location. Here is code to do so using Obspy:
 
 ```python
-distanceM, azimuth, back_azimuth = obspy.geodetics.base.gps2dist_azimuth(
+distance_m, azimuth, back_azimuth = obspy.geodetics.base.gps2dist_azimuth(
                                                                         float(event_lat), 
                                                                         float(event_lon),
                                                                         float(station_lat), 
