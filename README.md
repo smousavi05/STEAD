@@ -82,8 +82,7 @@ Direct link to the entire dataset (91.44 GB): https://mega.nz/folder/HNwm0SLY#h7
 
 https://rebrand.ly/STEADrg   or   https://rebrand.ly/STEADac
 
-### You can use QuakeLabeler to labele and convert your data into STEAD format:
-https://maihao14.github.io/QuakeLabeler/
+### You can use QuakeLabeler [https://maihao14.github.io/QuakeLabeler/] or SeisBench [https://github.com/seisbench/seisbench] to labele and convert your data into STEAD format:
 
 
 ### Last Update in the Dataset:
