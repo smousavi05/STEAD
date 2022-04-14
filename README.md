@@ -92,7 +92,7 @@ May 25, 2020
 
 Report bugs at https://github.com/smousavi05/STEAD/issues.
 
-or send me an email: mmousavi@stanford.edu
+or send me an email: smousavi05@gmail.com
 
 -------------------------------------
 Reference:
