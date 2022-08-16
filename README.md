@@ -393,5 +393,11 @@ You can check out the code repository of these studies as examples of how a Kera
 
 *   Complex Neural Networks for Estimating Epicentral Distance, Depth, and Magnitude of Seismic Waves,
     Ristea, Nicolae-Cătălin, and Anamaria Radoi., IEEE Geoscience and Remote Sensing Letters.
+    
+*   Earthquake detection and P-wave arrival time picking using capsule neural network. 
+    Saad, and Chen. IEEE Transactions on Geoscience and Remote Sensing, 59(7), 6234-6243.
+    
+*   Prediction of intensity and location of seismic events using deep learning.
+    Nicolis, Plaza, & Salas. Spatial Statistics, 42, 100442.
 
 
