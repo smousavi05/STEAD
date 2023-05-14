@@ -402,4 +402,5 @@ You can check out the code repository of these studies as examples of how a Kera
 *   Prediction of intensity and location of seismic events using deep learning.
     Nicolis, Plaza, & Salas. Spatial Statistics, 42, 100442.
 
-
+## License
+For more details on the license of this repository see [LICENSE](https://github.com/smousavi05/STEAD/blob/master/LICENSE).
